@@ -1,0 +1,11 @@
+apiVersion: v1                     # Specifies the API version used by Kubernetes
+kind: PersistentVolumeClaim        # Declares this resource as a PersistentVolumeClaim (PVC)
+metadata:
+  name: data-logs                  # Sets the name of the PVC to 'data-logs'
+  namespace: 74cudwfj-data-dev   # Specifies the namespace where the PVC will be created
+spec:
+  accessModes:
+    - ReadWriteOnce               # Allows the volume to be mounted with read-write access by a single node
+  resources:
+    requests:
+      storage: 128Mi              # Requests 128Mi of storage capacity
